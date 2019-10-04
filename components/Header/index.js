@@ -10,7 +10,7 @@
 // And add it to the DOM in the .header-container component
 
 const header = function() {
-    console.log ("Running the Header() function");
+    
     // Create the fields
     const newHeader = document.createElement("div");
     const newDate   = document.createElement("span");
@@ -32,7 +32,6 @@ const header = function() {
     newTitle.textContent = "Lambda Times";
     newTemp.textContent = "98°";
 
-    console.log ("Attaching the header");
     // Attach the component to the DOM
     const attachmentPoint = document.querySelector(".header-container");
     attachmentPoint.appendChild(newHeader);
