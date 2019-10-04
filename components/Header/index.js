@@ -9,4 +9,34 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header() {}
+const header = function() {
+    console.log ("Running the Header() function");
+    // Create the fields
+    const newHeader = document.createElement("div");
+    const newDate   = document.createElement("span");
+    const newTitle  = document.createElement("h1");
+    const newTemp   = document.createElement("span");
+
+    // Add classes to the fields
+    newHeader.classList.add("header");
+    newDate.classList.add("date");
+    newTemp.classList.add("temp");
+
+    // Add structure to the component
+    newHeader.appendChild(newDate);
+    newHeader.appendChild(newTitle);
+    newHeader.appendChild(newTemp);
+
+    // Fill with data. (Should we be doing this here?)
+    newDate.textContent = "MARCH 28, 2019";
+    newTitle.textContent = "Lambda Times";
+    newTemp.textContent = "98°";
+
+    console.log ("Attaching the header");
+    // Attach the component to the DOM
+    const attachmentPoint = document.querySelector(".header-container");
+    attachmentPoint.appendChild(newHeader);
+
+}
+
+header();
